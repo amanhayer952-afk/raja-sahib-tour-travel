@@ -91,6 +91,44 @@ footer{
   <a href="#booking">Book Car</a>
   <a href="#contact">Contact</a>
 </nav>
+  <nav>
+  <div class="rate-ticker">
+  🚕 Hoshiarpur → Delhi | 5 Seater ₹10,500 + Parking (Up/Down) | 7 Seater ₹13,000 + Parking (Up/Down) | 🛡️ Full Safety • Comfortable Journey • Raja Sahib Tour & Travel
+</div>
+
+<style>
+.rate-ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #111;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rate-ticker {
+  animation: moveRate 18s linear infinite;
+}
+
+@keyframes moveRate {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .rate-ticker {
+    font-size: 14px;
+  }
+}
+</style>
+  </nav>
+  
 
 <section class="hero" id="home">
   <h2>Your Journey, Our Responsibility</h2>
