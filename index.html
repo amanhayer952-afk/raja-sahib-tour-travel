@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Sahib Tour & Travel | Hoshiarpur</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f8fa;color:#222;line-height:1.6}
+header{
+  background:linear-gradient(135deg,#071d3b,#1261a0);
+  color:white;padding:22px 16px;text-align:center
+}
+header h1{font-size:28px;margin-bottom:5px}
+header p{font-size:15px}
+nav{
+  background:#fff;padding:12px;text-align:center;
+  position:sticky;top:0;z-index:10;
+  box-shadow:0 2px 8px #0002
+}
+nav a{color:#123;text-decoration:none;margin:0 8px;font-weight:bold;font-size:14px}
+
+.hero{
+  padding:55px 18px;text-align:center;color:white;
+  background:linear-gradient(#0008,#0008),
+  url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80");
+  background-size:cover;background-position:center
+}
+.hero h2{font-size:34px;margin-bottom:12px}
+.hero p{font-size:18px;margin-bottom:22px}
+.btn{
+  display:inline-block;background:#ffb703;color:#111;
+  padding:13px 22px;border-radius:8px;
+  text-decoration:none;font-weight:bold;margin:5px
+}
+.btn.green{background:#25d366;color:white}
+
+.container{max-width:1050px;margin:auto;padding:35px 18px}
+.title{text-align:center;margin-bottom:25px}
+.title h2{font-size:28px;color:#123d68}
+
+.services{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px
+}
+.card{
+  background:white;padding:25px 18px;border-radius:12px;
+  text-align:center;box-shadow:0 3px 12px #0001
+}
+.card .icon{font-size:42px;margin-bottom:10px}
+.card h3{color:#123d68;margin-bottom:8px}
+
+.booking{
+  background:white;border-radius:14px;padding:25px;
+  box-shadow:0 3px 15px #0002;max-width:700px;margin:auto
+}
+input,select,textarea{
+  width:100%;padding:13px;margin:7px 0 14px;
+  border:1px solid #ccc;border-radius:7px;font-size:16px
+}
+label{font-weight:bold}
+.submit{
+  width:100%;border:0;background:#25d366;color:white;
+  padding:14px;border-radius:8px;font-size:17px;font-weight:bold
+}
+
+.contact{
+  background:#0b3157;color:white;text-align:center
+}
+.contact a{color:#ffcf4a;text-decoration:none;font-weight:bold}
+footer{
+  background:#06192b;color:white;text-align:center;padding:20px;font-size:14px
+}
+.small{font-size:14px;color:#666}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚗 Raja Sahib Tour & Travel</h1>
+  <p>Hoshiarpur • Airport Service • Wedding Cars • Tours</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#booking">Book Car</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Your Journey, Our Responsibility</h2>
+  <p>24 Hours Airport Service • Wedding Cars • Anywhere Tours</p>
+
+  <a class="btn" href="#booking">📅 Book a Car</a>
+  <a class="btn green" href="tel:+919815403991">📞 Call Now</a>
+</section>
+
+<section class="container" id="services">
+  <div class="title">
+    <h2>Our Services</h2>
+    <p>Reliable travel service from Hoshiarpur</p>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <h3>24 Hours Airport Service</h3>
+      <p>Airport pickup and drop service available 24 hours.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💍</div>
+      <h3>Wedding Cars</h3>
+      <p>Beautiful and comfortable cars for weddings and special occasions.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3>Car Booking</h3>
+      <p>Book a car for local or outstation travel.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🗺️</div>
+      <h3>Anywhere Tours</h3>
+      <p>Plan your trip anywhere with Raja Sahib Tour & Travel.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="container" id="booking">
+  <div class="title">
+    <h2>🚗 Book Your Car Online</h2>
+    <p>Fill the form and send your booking request on WhatsApp.</p>
+  </div>
+
+  <div class="booking">
+
+    <form onsubmit="sendBooking(event)">
+
+      <label>Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <label>Mobile Number</label>
+      <input id="phone" type="tel" placeholder="Enter mobile number" required>
+
+      <label>Service</label>
+      <select id="service" required>
+        <option value="">Select service</option>
+        <option>Airport Pickup</option>
+        <option>Airport Drop</option>
+        <option>Wedding Car</option>
+        <option>Local Car Booking</option>
+        <option>Anywhere Tour</option>
+      </select>
+
+      <label>Pickup Location</label>
+      <input id="pickup" type="text" placeholder="Pickup location" required>
+
+      <label>Destination</label>
+      <input id="destination" type="text" placeholder="Destination" required>
+
+      <label>Date</label>
+      <input id="date" type="date" required>
+
+      <label>Extra Details</label>
+      <textarea id="details" rows="4" placeholder="Passengers, car requirement, etc."></textarea>
+
+      <button class="submit" type="submit">
+        📲 Send Booking on WhatsApp
+      </button>
+
+    </form>
+
+    <p class="small" style="margin-top:15px;text-align:center">
+      Your booking request will open WhatsApp with all your details.
+    </p>
+
+  </div>
+</section>
+
+<section class="container contact" id="contact">
+  <div class="title">
+    <h2 style="color:white">📞 Contact Raja Sahib Tour & Travel</h2>
+  </div>
+
+  <p>📍 New Court Road, Bajwara, Hoshiarpur</p>
+
+  <p style="margin-top:12px">
+    📞 <a href="tel:+919815403991">+91 98154 03991</a>
+  </p>
+
+  <p>
+    📞 <a href="tel:+919417676075">+91 94176 76075</a>
+  </p>
+
+  <p style="margin-top:18px">
+    Available for Airport Service 24 Hours
+  </p>
+</section>
+
+<footer>
+  © 2026 Raja Sahib Tour & Travel, Hoshiarpur<br>
+  All Rights Reserved
+</footer>
+
+<script>
+function sendBooking(event){
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const pickup = document.getElementById("pickup").value;
+  const destination = document.getElementById("destination").value;
+  const date = document.getElementById("date").value;
+  const details = document.getElementById("details").value;
+
+  const message =
+`🚗 RAJA SAHIB TOUR & TRAVEL - NEW BOOKING
+
+Name: ${name}
+Mobile: ${phone}
+Service: ${service}
+Pickup: ${pickup}
+Destination: ${destination}
+Date: ${date}
+Details: ${details}`;
+
+  const whatsappNumber = "919815403991";
+  const url = "https://wa.me/" + whatsappNumber +
+              "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+    </html>
